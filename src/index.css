@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    overflow-x: hidden;
+}
+
+input[type='text'],input[type='password'],#userType{
+    box-shadow: rgba(255, 255, 255, 0.18) 0px -1px 0px inset;
+}
+
+input[type='radio']{
+    all: unset;
+    background-color: transparent;
+    color: #F1F2FF;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+}
+
+input[type='radio'][value='Student']::before{
+    content: 'Student';
+}
+input[type='radio'][value='Instructor']::before{
+    content: 'Instructor';
+}
+
+input[type='radio']:checked{
+    background-color: #000814;
+    transition: all 0.2s ease;
+}
